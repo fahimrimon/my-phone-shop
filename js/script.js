@@ -54,6 +54,9 @@ const displayPhoneDetail = phone => {
     phoneDetails.textContent = '';
     const div = document.createElement('div');
     div.classList.add('card');
+    if (`${phone.releaseDate}` == '') {
+        alert('No release this product')
+    }
     div.innerHTML = `
     <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
